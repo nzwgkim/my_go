@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:my_go/layout/default_layout.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,9 +8,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultLayout(
-        title: "Home",
-        body: Column(
-          children: const [],
-        ));
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              context.go('/one');
+            },
+            child: const Text('Single'),
+          )
+        ],
+      ),
+    );
   }
 }
