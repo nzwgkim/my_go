@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:my_go/layout/default_layout.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('data'),
-      ),
-    );
+    return DefaultLayout(
+        title: "Home",
+        body: Column(
+          children: const [],
+        ));
   }
 }
